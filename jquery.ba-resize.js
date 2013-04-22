@@ -127,7 +127,9 @@
   // > elem.resize();
       
   $.event.special[ str_resize ] = {
-    
+    // The resize event should not bubble.
+		noBubble: true,
+
     // Called only when the first 'resize' event callback is bound per element.
     setup: function() {
       // Since window has its own native 'resize' event, return false so that
